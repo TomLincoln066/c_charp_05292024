@@ -1,0 +1,105 @@
+1.What type would you choose for the following “numbers”?
+- A person’s telephone number
+string
+Reason: Telephone numbers can contain special characters (like +, -, and parentheses) 
+and are not used for arithmetic operations.
+
+- A person’s height
+double or float
+Reason: Height can have decimal points, 
+and precision might be important depending on the context.
+
+- A person’s age
+int
+Reason: Age is typically represented as a whole number.
+
+- A person’s gender (Male, Female, Prefer Not To Answer)
+enum
+Reason: Enum provides a clear, predefined set of values.
+
+- A person’s salary
+prefer decimal (double/float should work too)
+Reason: Decimal is preferred for financial calculations due to its precision.
+
+- A book’s ISBN
+string
+Reason: ISBN contains characters and is not used for arithmetic operations.
+
+- A book’s price
+prefer decimal (double/float should work too)
+Reason: Price involves decimal points and precision is crucial in financial contexts.
+
+- A book’s shipping weight
+float / double
+Reason: Weight can have decimal points, and precision might be needed.
+
+- A country’s population
+long
+Reason: population could be a large number
+
+- The number of stars in the universe
+ulong
+Reason: This number is extremely large, so an unsigned long integer might be appropriate.
+
+- The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+int
+Reason: An integer is sufficient to represent employee counts up to 50,000 for sure.
+
+
+2. What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+
+Value type:
+Value type will hold the value variable
+Value type stored in stack memory
+Value type are not collected by garbage collector
+Value type can't accept null value
+Value type are created using Struct or Enum
+
+
+Reference type:
+Reference type will hold the memory address
+Reference type are stored in heap memory
+Reference type are collected by garbage collector
+Reference type can accept null value
+Reference type are created using class or interface
+
+Boxing:
+Boxing is the process of converting a value type to the type object 
+or to any interface type implemented by this value type.
+
+----example
+int i = 123;
+object o = i;
+----
+
+
+Unboxing:
+Unboxing extracts the value type from the object.(Converting an object type back to a value type.)
+----example
+object obj = 123;
+int value = (int)obj; // Unboxing
+----
+
+
+3. What is meant by the terms managed resource and unmanaged resource in .NET?
+
+Managed Resource:
+Managed by the .NET runtime (CLR = Common Language Runtime).
+Examples: Memory allocated for objects, arrays.
+CLR automatically handles the allocation and release of managed resources.
+
+Unmanaged Resource:
+Not managed by the .NET runtime.
+Examples: File handles, database connections, network sockets.
+Requires explicit handling and releasing of resources.
+
+
+4. Whats the purpose of Garbage Collector in .NET?
+
+- Automatically manages memory.
+- Frees up memory occupied by objects that are no longer in use.
+- Helps to prevent memory leaks and optimize memory usage.
+- Works by periodically scanning the managed heap, 
+identifying objects that are no longer accessible, and reclaiming their memory.

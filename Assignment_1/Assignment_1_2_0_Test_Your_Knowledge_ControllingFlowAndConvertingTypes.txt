@@ -1,0 +1,59 @@
+Controlling Flow and Converting Types:
+Test your Knowledge:
+
+1. What happens when you divide an int variable by 0?
+Dividing an int variable by 0 in C# will throw a System.DivideByZeroException. 
+This is a runtime exception that occurs because division 
+by zero is mathematically undefined for integers.
+
+
+2. What happens when you divide a double variable by 0?
+Dividing a double variable by 0 in C# results in Infinity or -Infinity 
+If you divide zero by zero, it results in NaN (Not a Number).
+
+3. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+When an int variable overflows in C#, it wraps around to the minimum value and continues from there. 
+For example, if you add 1 to int.MaxValue, it will wrap around to int.MinValue. 
+If overflow checking is enabled using checked, an OverflowException will be thrown.
+
+4. What is the difference between x = y++; and x = ++y;?
+x = y++; (Post-increment): Assigns the current value of y to x and then increments y by 1.
+x = ++y; (Pre-increment): Increments y by 1 and then assigns the new value of y to x.
+
+5. What is the difference between break, continue, and return when used inside a loop
+statement?
+break: Exits the loop entirely.
+continue: Skips the current iteration and proceeds to the next iteration of the loop.
+return: Exits the method in which the loop is contained, terminating the loop and the method.
+
+6. What are the three parts of a for statement and which of them are required?
+
+The three parts of a for statement are:
+Initialization (e.g., int i = 0)
+Condition (e.g., i < 10)
+Iteration (e.g., i++)
+
+All three parts are optional, but the semicolons must be present. 
+For example, for (; ; ) { } is valid and represents an infinite loop.
+
+7. What is the difference between the = and == operators?
+
+=: Assignment operator. It assigns the value on the right-hand side to the variable on the left-hand side.
+==: Equality operator. It compares the values on both sides and returns true if they are equal and false otherwise.
+
+8. Does the following statement compile? for ( ; true; ) ;
+
+Yes, the statement for ( ; true; ) ; compiles and represents an infinite loop.
+The loop will run indefinitely because the condition true is always satisfied.
+
+9. What does the underscore _ represent in a switch expression?
+
+In a switch expression, the underscore _ represents a default case or a match-all pattern. 
+It is used to match any value that has not been explicitly handled by other cases.
+
+10. What interface must an object implement to be enumerated over by using the foreach
+statement?
+
+An object must implement the IEnumerable or IEnumerable<T> interface to be enumerated 
+over by using the foreach statement.
